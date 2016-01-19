@@ -21,6 +21,6 @@ FuelPHP ORM based blog application
 
 4. run "php oil r migrate" from root path where oil file placed.
 
-# Running the Application
+# Run Application
 
 You can access the application from http://localhost/Fuelphp-blog-master/fuel/public/, change localhost/Fuelphp-blog-master to whatever you set in your environment.
