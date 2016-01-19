@@ -6,5 +6,5 @@
 <?php $blog = isset($blog) ? $blog : ''; ?>
 <h2 class="first">New Comment</h2>
 <?php echo $form; ?>
-<p><?php echo Html::anchor('blog/view/'.$message, 'Back'); ?></p>
+<p><?php echo Html::anchor('blog/view/'.$blog, 'Back'); ?></p>
 <p>Create</p>

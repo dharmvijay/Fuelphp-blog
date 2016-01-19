@@ -16,8 +16,18 @@
                 <ul>
                     <li><?php echo $blog->content; ?></li>
                     <?php echo Html::anchor('blog/view/'.$blog->id, $comment_links[$blog->id]); ?>
-                    <?php echo Html::anchor('blog/edit/'.$blog->id, 'Edit'); ?>
-                    <?php echo Html::anchor('blog/delete/'.$blog->id, 'Delete', array('onclick' => "return confirm('Are you sure?')")); ?></li>
+                    <?php 
+                    if (Auth::instance()->check())
+                    {    
+                        echo Html::anchor('blog/edit/'.$blog->id, 'Edit'); 
+                    }
+                    ?>
+                    <?php
+                    if (Auth::instance()->check())
+                    {     
+                        echo Html::anchor('blog/delete/'.$blog->id, 'Delete', array('onclick' => "return confirm('Are you sure?')"));
+                    }
+                    ?></li>
                 </ul>
             </li>
         <?php endforeach; ?>
